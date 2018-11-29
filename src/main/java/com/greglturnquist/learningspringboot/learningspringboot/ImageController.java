@@ -22,7 +22,7 @@ public class ImageController {
         );
     }
 
-    @PostMapping("/images")
+    @PostMapping("/api/images")
     Mono<Void> create(@RequestBody Flux<Image> images) {
         return images
                 .map(image -> {

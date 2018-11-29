@@ -16,8 +16,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import com.greglturnquist.learningspringboot.learningspringboot.Image;
-
 
 @Service
 public class ImageService {
@@ -38,13 +36,13 @@ public class ImageService {
 
             FileCopyUtils.copy("Test file",
                     new FileWriter(UPLOAD_ROOT +
-                            "/learning-spring-boot-cover.jpg"));
+                            "/logo-herlulenum.jpg"));
             FileCopyUtils.copy("Test file2",
                     new FileWriter(UPLOAD_ROOT +
-                            "/learning-spring-boot-2nd-edition-cover.jpg"));
+                            "/logo-markerfelt.jpg"));
             FileCopyUtils.copy("Test file3",
                     new FileWriter(UPLOAD_ROOT +
-                            "/bazinga.jpg"));
+                            "/logo-menlo.jpg"));
 
         };
     }
