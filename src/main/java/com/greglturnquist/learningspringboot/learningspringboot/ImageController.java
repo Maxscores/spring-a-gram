@@ -16,9 +16,9 @@ public class ImageController {
     @GetMapping("/api/images")
     Flux<Image> images() {
         return Flux.just(
-                new Image(1, "logo-herlulenum.jpeg"),
-                new Image(2, "logo-markerfelt.jpeg"),
-                new Image(3, "logo-menlo.jpeg")
+                new Image("1", "logo-herlulenum.jpeg"),
+                new Image("2", "logo-markerfelt.jpeg"),
+                new Image("3", "logo-menlo.jpeg")
         );
     }
 
