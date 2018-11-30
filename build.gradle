@@ -25,13 +25,16 @@ repositories {
 
 
 dependencies {
+	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
 	implementation('org.springframework.boot:spring-boot-starter-webflux')
+	annotationProcessor("org.projectlombok:lombok")
 	compileOnly('org.projectlombok:lombok:1.18.0')
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb-reactive')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	testImplementation('io.projectreactor:reactor-test')
 	testCompile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
 	testCompile("io.projectreactor:reactor-test")
-	testCompile("org.seleniumhq.selenium:selenium-java")
+	compile("org.seleniumhq.selenium:selenium-java")
+	compile("org.seleniumhq.selenium:htmlunit-driver")
 }
