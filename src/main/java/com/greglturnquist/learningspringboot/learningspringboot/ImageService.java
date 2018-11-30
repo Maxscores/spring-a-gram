@@ -30,26 +30,6 @@ public class ImageService {
         this.imageRepository = imageRepository;
     }
 
-    @Bean
-    CommandLineRunner setUp() throws IOException {
-        return (args) -> {
-            FileSystemUtils.deleteRecursively(new File(UPLOAD_ROOT));
-
-            Files.createDirectory(Paths.get(UPLOAD_ROOT));
-
-            FileCopyUtils.copy("Test file",
-                    new FileWriter(UPLOAD_ROOT +
-                            "/logo-herlulenum.jpg"));
-            FileCopyUtils.copy("Test file2",
-                    new FileWriter(UPLOAD_ROOT +
-                            "/logo-markerfelt.jpg"));
-            FileCopyUtils.copy("Test file3",
-                    new FileWriter(UPLOAD_ROOT +
-                            "/logo-menlo.jpg"));
-
-        };
-    }
-
     public Flux<Image> findAllImages() {
         return imageRepository.findAll()
             .log("findAll");
