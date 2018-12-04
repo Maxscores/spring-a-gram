@@ -1,7 +1,10 @@
 language: java
+addons:
+  chrome: stable
 jdk: oraclejdk8
 script:
-  ./gradlew clean build
+  - "google-chrome --version"
+  - ./gradlew clean build
 services:
   - mongodb
 notifications:
