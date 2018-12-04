@@ -7,9 +7,9 @@ script:
   - "google-chrome --version"
   - ./gradlew clean build
 before_script:
+  - brew update
+  - brew install mongodb
   - brew services start mongodb
-  - sleep 15
-
 
 services:
   - mongodb
