@@ -7,17 +7,11 @@ script:
   - "google-chrome --version"
   - ./gradlew clean build
 before_script:
-  - echo "Before install - OS is $TRAVIS_OS_NAME"
-  - echo "Updating both homebrew, mongodb and redis-server"
-  - if [[ $TRAVIS_OS_NAME = 'osx' ]]; then
-     echo "Updating homebrew"
-     brew update
-     echo "Installing and starting mongodb"
-     brew install mongodb
-     sudo mkdir -p /data/db
-     brew services start mongodb
-   fi
+  - brew services start mongodb
   - sleep 15
 
+
+services:
+  - mongodb
 notifications:
   email: false
