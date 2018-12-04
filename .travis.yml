@@ -20,8 +20,5 @@ before_script:
    fi
   - sleep 15
 
-
-services:
-  - mongodb
 notifications:
   email: false
