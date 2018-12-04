@@ -17,9 +17,6 @@ before_script:
     # create a folder for mongodb to prevent an error on mac osx
   - sudo mkdir -p /data/db
   - brew services start mongodb
-  - echo "Installing and starting redis-server"
-  - brew install redis
-  - brew services start redis
   - fi
   - sleep 15
 
