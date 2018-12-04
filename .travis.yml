@@ -1,4 +1,5 @@
 language: java
+os: osx
 addons:
   chrome: stable
 jdk: oraclejdk8
