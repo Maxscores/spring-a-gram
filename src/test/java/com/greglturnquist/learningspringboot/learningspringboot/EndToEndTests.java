@@ -54,7 +54,7 @@ public class EndToEndTests {
 
     @Test
     public void homePageShouldWork() throws IOException {
-        driver.get("http://localhost:" + port);
+        driver.get("https://localhost:" + port);
 
         takeScreenshot("homePageShouldWork-1");
         assertThat(driver.getTitle())
