@@ -5,7 +5,10 @@ addons:
 jdk: oraclejdk8
 script:
   - "google-chrome --version"
-  - ./gradlew clean build --info
+  - ./gradlew clean build
+before_script:
+  - sleep 15
+
 services:
   - mongodb
 notifications:
